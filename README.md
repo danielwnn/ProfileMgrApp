@@ -1,6 +1,12 @@
 # ProfileMgrApp
 
-CSE Challenge #1 - Profile Manager with Face Detection and Verification (optional)
+CSE Challenge #1 - Profile Manager with Face Detection
+
+## Future Improvements
+
+* Integrate with App Insights
+* Store secrets / connection strings in Azure Key Vault
+* Store image files in Azure Blob storage
 
 ## Azure Deployment 
 
