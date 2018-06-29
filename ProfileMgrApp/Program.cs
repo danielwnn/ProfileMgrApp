@@ -20,10 +20,10 @@ namespace ProfileMgrApp
                 var services = scope.ServiceProvider;
 
                 try
-                {
+                {   // TODO: add environment check, this logic is only needed for dev/test
                     var context = services.GetRequiredService<EmployeeProfileDbContext>();
                     context.Database.Migrate();
-                    SeedEmployeeProfiles.Initialize(services);
+                    SeedEmployeeProfiles.Initialize(context);
                 }
                 catch (Exception ex)
                 {
