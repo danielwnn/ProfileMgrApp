@@ -11,7 +11,7 @@ CSE Challenge #1 - Profile Manager with Face Detection
 
 ## How to run tests
 
-At the command line, change to the test project folder - "ProfileMgrApp.Tests" and then run "dotnet test".
+At the command line, change to the repository root folder, then run "dotnet test".
 
 Visual Studio 2017: Launch Test Explorer (Menu path: Test -> Windows -> Test Explorer)
 
