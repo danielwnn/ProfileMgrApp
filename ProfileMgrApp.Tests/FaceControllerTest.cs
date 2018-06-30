@@ -1,14 +1,9 @@
-using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
 using ProfileMgrApp.Controllers;
-using ProfileMgrApp.Data;
 using ProfileMgrApp.Helpers;
-using ProfileMgrApp.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
