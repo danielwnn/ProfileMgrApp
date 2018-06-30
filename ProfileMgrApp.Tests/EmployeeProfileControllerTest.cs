@@ -70,7 +70,8 @@ namespace ProfileMgrApp.Tests
             };
 
             // test create
-            var result = await _controller.Create(profile, null);
+            FormFile formFile = CreateFormFile("face.jpg");
+            var result = await _controller.Create(profile, formFile);
             Assert.IsType<RedirectToActionResult>(result);
         }
 
@@ -104,8 +105,13 @@ namespace ProfileMgrApp.Tests
             var result = await _controller.Edit(4, profile, null);
             Assert.IsType<NotFoundResult>(result);
 
-            // test the change of last name
+            // test the change of last name without photo file
             result = await _controller.Edit(3, profile, null);
+            Assert.IsType<RedirectToActionResult>(result);
+
+            // test the change of last name with photo file
+            FormFile formFile = CreateFormFile("face2.jpg");
+            result = await _controller.Edit(3, profile, formFile);
             Assert.IsType<RedirectToActionResult>(result);
 
             // check if the last names match
@@ -137,6 +143,23 @@ namespace ProfileMgrApp.Tests
             // check if the profile is really deleted
             EmployeeProfile profile = await _repository.ReadAsync(4);
             Assert.Null(profile);
+        }
+
+        private FormFile CreateFormFile(string fileName)
+        {
+            // image file
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\images\\", fileName);
+            FileStream file = new FileStream(filePath, FileMode.Open);
+
+            // header
+            HeaderDictionary headers = new HeaderDictionary();
+            headers["Content-Type"] = "image/jpeg";
+
+            // form file
+            FormFile formFile = new FormFile(file, 0, file.Length, "ImageFile", fileName);
+            formFile.Headers = headers;
+
+            return formFile;
         }
     }
 }

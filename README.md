@@ -4,9 +4,16 @@ CSE Challenge #1 - Profile Manager with Face Detection
 
 ## Future Improvements
 
+* Add more logging info
 * Integrate with App Insights
 * Store secrets / connection strings in Azure Key Vault
 * Store image files in Azure Blob storage
+
+## How to run tests
+
+At the command line, change to the test project folder - "ProfileMgrApp.Tests" and then run "dotnet test".
+
+Visual Studio 2017: Launch Test Explorer (Menu path: Test -> Windows -> Test Explorer)
 
 ## Azure Deployment 
 
