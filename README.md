@@ -5,9 +5,11 @@ CSE Challenge #1 - Profile Manager with Face Detection
 ## Future Improvements
 
 * Add more logging info
+* Add friendly error page for production
 * Integrate with App Insights
 * Store secrets / connection strings in Azure Key Vault
 * Store image files in Azure Blob storage
+* Client-side resources are bundled, minified, and potentially served from a CDN
 
 ## How to run tests
 
