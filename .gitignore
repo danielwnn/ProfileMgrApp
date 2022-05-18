@@ -1,0 +1,9 @@
+#folders
+.vs/
+.vscode/
+ProfileMgrApp/bin/
+ProfileMgrApp/obj/
+ProfileMgrApp.Tests/bin/
+ProfileMgrApp.Tests/obj/
+ProfileMgrApp/*.local
+
