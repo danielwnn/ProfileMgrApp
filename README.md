@@ -56,8 +56,5 @@ docker push gcr.io/<gcp project>/profilemgrapp
 gcloud run deploy <service name> --image gcr.io/<gcp project>/profilemgrapp
 ~~~
 
-## Sample Site
-[https://profilemgrapp.azurewebsites.net](https://profilemgrapp.azurewebsites.net)
-
 ## License
 MIT license
